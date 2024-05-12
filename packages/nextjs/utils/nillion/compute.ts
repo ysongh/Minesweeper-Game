@@ -19,7 +19,7 @@ export async function compute(
     const program_bindings = new nillion.ProgramBindings(program_id);
 
     // add input and output party details (name and party id) to program bindings
-    const partyName = "Party1";
+    const partyName = "Miner";
     const party_id = nillionClient.party_id;
     program_bindings.add_input_party(partyName, party_id);
     program_bindings.add_output_party(partyName, party_id);

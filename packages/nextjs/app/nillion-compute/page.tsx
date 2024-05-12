@@ -36,7 +36,7 @@ const Home: NextPage = () => {
     my_int1: null,
     my_int2: null,
   });
-  const [parties] = useState<string[]>(["Party1"]);
+  const [parties] = useState<string[]>(["Miner"]);
   const [outputs] = useState<string[]>(["my_output"]);
 
   // connect to snap
