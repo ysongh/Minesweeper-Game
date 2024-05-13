@@ -5,7 +5,6 @@ def nada_main():
     my_int1 = SecretInteger(Input(name="my_int1", party=miner))
     my_int2 = SecretInteger(Input(name="my_int2", party=miner))
 
-    grid: list[SecretInteger] = []
-    grid.append(my_int1 - my_int2)
+    grid = [my_int1 + my_int2 + Integer(i) for i in range(3)]
 
-    return [Output(grid[0], "my_output", miner)]
+    return [Output(grid[1], "my_output", miner)]
