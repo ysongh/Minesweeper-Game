@@ -8,6 +8,7 @@ import { CopyString } from "~~/components/nillion/CopyString";
 import { NillionOnboarding } from "~~/components/nillion/NillionOnboarding";
 import RetrieveSecretCommand from "~~/components/nillion/RetrieveSecretCommand";
 import SecretForm from "~~/components/nillion/SecretForm";
+import MinesweepForm from "~~/components/nillion/MinesweepForm";
 import { Address } from "~~/components/scaffold-eth";
 import { compute } from "~~/utils/nillion/compute";
 import { getUserKeyFromSnap } from "~~/utils/nillion/getUserKeyFromSnap";
@@ -246,6 +247,30 @@ const Home: NextPage = () => {
                       </div>
                     ))}
                   </div>
+
+                  {!!storedSecretsNameToStoreId["my_int2"] && userKey ? (
+                    <>
+                      <RetrieveSecretCommand
+                        secretType="SecretInteger"
+                        userKey={userKey}
+                        storeId={storedSecretsNameToStoreId["my_int2"]}
+                        secretName="my_int2"
+                      />
+                      <button
+                        className="btn btn-sm btn-primary mt-4"
+                        onClick={() => handleRetrieveInt("my_int2", storedSecretsNameToStoreId["my_int2"])}
+                      >
+                        👀 Retrieve SecretInteger
+                      </button>
+                    </>
+                  ) : (
+                    <MinesweepForm
+                      secretName={"my_int2"}
+                      onSubmit={handleSecretFormSubmit}
+                      isDisabled={!programId}
+                      secretType="number"
+                    />
+                  )}
                 </div>
 
                 <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center w-full rounded-3xl my-2 justify-between">
