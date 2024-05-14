@@ -12,11 +12,10 @@ def nada_main():
         for j in range(3)    
     ]
 
-    return [
-        Output(grid[0][i], "my_output" + str(i), miner)
-        for i in range(3),
-        Output(grid[1][i], "my_output" + str(i), miner)
-        for i in range(3),
-        Output(grid[2][i], "my_output" + str(i), miner)
-        for i in range(3),
-    ]
+    outputs: list[Output] = []
+
+    for i in range(3):
+        for j in range(3):
+            outputs.append(Output(grid[i][j], "my_output" + str(i) + str(j), miner))
+    
+    return outputs
