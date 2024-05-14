@@ -286,7 +286,10 @@ const Home: NextPage = () => {
                       Compute on {programName}
                     </button>
                   )}
-                  {computeResult && <p>✅ Compute result: {computeResult}</p>}
+                  {/* {computeResult && <p>✅ Compute result: {computeResult}</p>} */}
+                  {computeResult && Object.keys(computeResult).map(key => (
+                    <p key={key}>{key} = {computeResult[key].toString()}</p>
+                  ))}
                 </div>
               </div>
             )}

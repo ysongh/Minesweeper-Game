@@ -56,8 +56,9 @@ export async function compute(
     );
 
     const compute_result = await nillionClient.compute_result(compute_result_uuid);
-    const result = compute_result[outputName].toString();
-    return result;
+    // console.log(compute_result, "compute_result")
+    // const result = compute_result[outputName].toString();
+    return compute_result;
   } catch (error: any) {
     console.log("error", error);
     return "error";

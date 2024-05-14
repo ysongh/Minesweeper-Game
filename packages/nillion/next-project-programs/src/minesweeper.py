@@ -7,4 +7,7 @@ def nada_main():
 
     grid = [my_int1 + my_int2 + Integer(i) for i in range(3)]
 
-    return [Output(grid[1], "my_output", miner)]
+    return [
+        Output(grid[i], "my_output" + str(i), miner)
+        for i in range(3)
+    ]
