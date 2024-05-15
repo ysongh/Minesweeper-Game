@@ -7,10 +7,12 @@ def nada_main():
 
     grid = [
         [
-            my_int1 + my_int2 + Integer(i) for i in range(3)
+            Integer(0) for i in range(3)
         ]
         for j in range(3)    
     ]
+
+    grid[0][0] = my_int1 + my_int2
 
     outputs: list[Output] = []
 
