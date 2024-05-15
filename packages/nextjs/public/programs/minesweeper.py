@@ -6,15 +6,16 @@ def nada_main():
     my_int2 = SecretInteger(Input(name="my_int2", party=miner))
 
     grid = []
-    index = 0
+    index = Integer(1)
 
     for r in range(3):
         temp = []
         for c in range(3):
-            temp.append(Integer(0))
+            res = (my_int1 == index).if_else((my_int2 == index).if_else(Integer(99), Integer(99)), Integer(0))
+            temp.append(res)
+            index += Integer(1)
+            
         grid.append(temp)
-
-    grid[0][0] = my_int1 + my_int2
 
     outputs: list[Output] = []
 
