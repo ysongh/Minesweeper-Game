@@ -11,7 +11,8 @@ def nada_main():
     for r in range(3):
         temp = []
         for c in range(3):
-            res = (my_int1 == index).if_else((my_int2 == index).if_else(Integer(99), Integer(99)), Integer(0))
+            res = (my_int1 >= index).if_else((my_int1 <= index).if_else(Integer(99), Integer(0)), Integer(0))
+            res += (my_int2 >= index).if_else((my_int2 <= index).if_else(Integer(99), Integer(0)), Integer(0))
             temp.append(res)
             index += Integer(1)
             
