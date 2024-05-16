@@ -287,9 +287,13 @@ const Home: NextPage = () => {
                     </button>
                   )}
                   {/* {computeResult && <p>✅ Compute result: {computeResult}</p>} */}
-                  {computeResult && Object.keys(computeResult).map(key => (
-                    <p key={key}>{key} = {computeResult[key].toString()}</p>
-                  ))}
+                  <div className="flex flex-wrap w-[600px]">
+                    {computeResult && Object.keys(computeResult).map(key => (
+                      <p className="p-4 m-2 bg-yellow-200" key={key}>
+                        {key} = {computeResult[key].toString()}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
