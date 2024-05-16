@@ -2,8 +2,9 @@ from nada_dsl import *
 
 def nada_main():
     miner = Party(name="Miner")
+    minesweeper = Party(name="Minesweeper")
     my_int1 = SecretInteger(Input(name="my_int1", party=miner))
-    my_int2 = SecretInteger(Input(name="my_int2", party=miner))
+    my_int2 = SecretInteger(Input(name="my_int2", party=minesweeper))
 
     grid = []
     index = Integer(1)
