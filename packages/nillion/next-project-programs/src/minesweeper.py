@@ -20,18 +20,21 @@ def nada_main():
         grid.append(temp)
 
 
+    targetR = 1
+    targetC = 1
+
     count = Integer(0)
 
     ## Up
-    count += (grid[0][1] >= Integer(99)).if_else((grid[0][1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
+    count += (grid[targetR - 1][targetC] >= Integer(99)).if_else((grid[targetR - 1][targetC] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
     ## Down
-    count += (grid[2][1] >= Integer(99)).if_else((grid[2][1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
+    count += (grid[targetR + 1][targetC] >= Integer(99)).if_else((grid[targetR + 1][targetC] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
     ## Left
-    count += (grid[1][0] >= Integer(99)).if_else((grid[1][0] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
+    count += (grid[targetR][targetC - 1] >= Integer(99)).if_else((grid[targetR][targetC - 1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
     ## Right
-    count += (grid[1][2] >= Integer(99)).if_else((grid[1][2] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
+    count += (grid[targetR][targetC + 1] >= Integer(99)).if_else((grid[targetR][targetC + 1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
 
-    grid[1][1] = count
+    grid[targetR][targetC] = count
 
     outputs: list[Output] = []
 
