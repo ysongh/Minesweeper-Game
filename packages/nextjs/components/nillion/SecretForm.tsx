@@ -41,7 +41,7 @@ const SecretForm: React.FC<SecretFormProps> = ({
     setLoading(true);
     onSubmit(
       secretNameFromForm,
-      secret + 1,
+      (Number(secret) + 1).toString(),
       permissionedUserIdForRetrieveSecret,
       permissionedUserIdForUpdateSecret,
       permissionedUserIdForDeleteSecret,

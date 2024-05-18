@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     my_int2: null,
   });
   const [parties] = useState<string[]>(["Miner"]);
-  const [outputs] = useState<string[]>(["my_output"]);
+  const [outputs] = useState<string[]>(["miner_output"]);
 
   // connect to snap
   async function handleConnectToSnap() {

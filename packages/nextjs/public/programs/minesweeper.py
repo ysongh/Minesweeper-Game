@@ -44,6 +44,6 @@ def nada_main():
 
     for i in range(3):
         for j in range(3):
-            outputs.append(Output(grid[i][j], "my_output" + str(i) + str(j), miner))
+            outputs.append(Output(grid[i][j], "miner_output" + str(i) + str(j), miner))
     
     return outputs
