@@ -23,11 +23,16 @@ def nada_main():
     for r in range(3):
         temp = []
         for c in range(3):
-            res = (my_int2 >= sweeperIndex).if_else((my_int2 <= sweeperIndex).if_else(Integer(99), Integer(0)), Integer(0))
+            res = (my_int2 >= sweeperIndex).if_else((my_int2 <= sweeperIndex).if_else(Integer(77), Integer(0)), Integer(0))
             temp.append(res)
             sweeperIndex += Integer(1)
             
         sweeperGrid.append(temp)
+
+    for r in range(3):
+        for c in range(3):
+            sweeperGrid[r][c] += (sweeperGrid[r][c] == Integer(77)).if_else(Integer(100), (grid[r][c] == sweeperGrid[r][c]).if_else(Integer(0), Integer(0)))
+           
 
 
     # targetR = 0
