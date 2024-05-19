@@ -31,29 +31,8 @@ def nada_main():
 
     for r in range(3):
         for c in range(3):
-            sweeperGrid[r][c] += (sweeperGrid[r][c] == Integer(77)).if_else(Integer(100), (grid[r][c] == sweeperGrid[r][c]).if_else(Integer(0), Integer(0)))
-           
-
-
-    # targetR = 0
-    # targetC = 2
-
-    # count = Integer(0)
-
-    # if (targetR > 0):
-    #     ## Up
-    #     count += (grid[targetR - 1][targetC] >= Integer(99)).if_else((grid[targetR - 1][targetC] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
-    # if (targetR < 2):
-    #     ## Down
-    #     count += (grid[targetR + 1][targetC] >= Integer(99)).if_else((grid[targetR + 1][targetC] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
-    # if (targetC > 0):
-    #     ## Left
-    #     count += (grid[targetR][targetC - 1] >= Integer(99)).if_else((grid[targetR][targetC - 1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
-    # if (targetC < 2):
-    #     ## Right
-    #     count += (grid[targetR][targetC + 1] >= Integer(99)).if_else((grid[targetR][targetC + 1] <= Integer(99)).if_else(Integer(1), Integer(0)), Integer(0))
-
-    # grid[targetR][targetC] = count
+            sweeperGrid[r][c] += (sweeperGrid[r][c] == Integer(77)).if_else(Integer(100),
+                (grid[r][c] == sweeperGrid[r][c]).if_else(Integer(0), Integer(0)))
 
     outputs: list[Output] = []
 
