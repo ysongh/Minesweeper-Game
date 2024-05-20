@@ -247,30 +247,6 @@ const Home: NextPage = () => {
                       </div>
                     ))}
                   </div>
-
-                  {!!storedSecretsNameToStoreId["my_int2"] && userKey ? (
-                    <>
-                      <RetrieveSecretCommand
-                        secretType="SecretInteger"
-                        userKey={userKey}
-                        storeId={storedSecretsNameToStoreId["my_int2"]}
-                        secretName="my_int2"
-                      />
-                      <button
-                        className="btn btn-sm btn-primary mt-4"
-                        onClick={() => handleRetrieveInt("my_int2", storedSecretsNameToStoreId["my_int2"])}
-                      >
-                        👀 Retrieve SecretInteger
-                      </button>
-                    </>
-                  ) : (
-                    <MinesweepForm
-                      secretName={"my_int2"}
-                      onSubmit={handleSecretFormSubmit}
-                      isDisabled={!programId}
-                      secretType="number"
-                    />
-                  )}
                 </div>
 
                 <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center w-full rounded-3xl my-2 justify-between">
